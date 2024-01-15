@@ -4,6 +4,14 @@ A demonstration of Python deployment with WSGI using [Circus](https://circus.rea
 
 > Circus is a Process & Socket Manager
 
+---
+
+## Installation
+
+Here, a tutorial step by step of deployment with Plone WSGI using Circus:
+
+### Pre dependencies
+
 Create a virtual environment, executing the following command:
 
 ```bash
@@ -13,13 +21,13 @@ $ python3 -m venv ./venv
 Activate the virtual environment, executing the following command:
 
 ```bash
-$ source venv/bin/activate
+$ source ./venv/bin/activate
 ```
 
 Install the pre-requirements Python dependencies, executing the following command:
 
 ```bash
-$ pip3 install -r requirements.txt
+$ ./venv/bin/pip3 install -r requirements.txt
 ```
 
 Run Hello World app, executing the following command:
@@ -48,6 +56,14 @@ port = 9999
 
 Save the changes and close the ``circus.ini`` file.
 
+---
+
+## Circus scripts
+
+Circus installs some scripts to manage this project.
+
+### circus daemon
+
 Run it using ``circusd``, executing the following command:
 
 ```bash
@@ -62,11 +78,17 @@ Also can run as a daemon service, executing the following command:
 $ ./venv/bin/circusd --daemon ./circus.ini
 ```
 
+This keeps ``circusd`` in the foreground mode.
+
+### circus top
+
 You can checkout the monitor stats console, like a ``top`` command, executing the following command:
 
 ```bash
 $ ./venv/bin/circus-top
 ```
+
+### circus control
 
 You can checkout the status service, executing the following command:
 
