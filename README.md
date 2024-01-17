@@ -1,14 +1,20 @@
 # example-wsgi-app-circus
 
-A demonstration of Python deployment with WSGI using [Circus](https://circus.readthedocs.io/en/latest/).
+A demonstration of Python deployment with WSGI using ``Circus``.
 
-> Circus is a Process & Socket Manager
+> [Circus](https://circus.readthedocs.io/), A Process & Socket Manager.
+
+---
+
+## Tested it
+
+- Python 3.11.2.
 
 ---
 
 ## Installation
 
-Here, a tutorial step by step of deployment with Plone WSGI using Circus:
+Here, a tutorial step by step of deployment with [chaussette](https://chaussette.readthedocs.io/) WSGI app using ``Circus``:
 
 ### Pre dependencies
 
@@ -30,7 +36,7 @@ Install the pre-requirements Python dependencies, executing the following comman
 $ ./venv/bin/pip3 install -r requirements.txt
 ```
 
-Run Hello World app, executing the following command:
+Run **Hello World** app, executing the following command:
 
 ```bash
 $ ./venv/bin/chaussette
@@ -70,7 +76,7 @@ Run it using ``circusd``, executing the following command:
 $ ./venv/bin/circusd ./circus.ini
 ```
 
-Now visit [http://127.0.0.1:9999](http://127.0.0.1:9999), you should  see the **hello world** app. The difference now is that the socket is managed by Circus and there are several web workers that are accepting connections against it.
+Now visit [http://localhost:9999](http://localhost:9999), you should  see the **hello world** app. The difference now is that the socket is managed by Circus and there are several web workers that are accepting connections against it.
 
 Also can run as a daemon service, executing the following command:
 
